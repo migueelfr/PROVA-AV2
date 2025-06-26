@@ -127,12 +127,14 @@ Acesse:
 Adicione aqui prints do Grafana, Prometheus e Swagger para ilustrar o monitoramento e a documentação da API:
 
 ```markdown
-![Swagger UI](prints/swagger.png)
-![Prometheus](prints/prometheus.png)
-![Dashboard do Grafana](prints/grafana-dashboard.png)
+![image](https://github.com/user-attachments/assets/d295bf2f-8a8e-46bd-a92e-8c2502033425)
+
+![image](https://github.com/user-attachments/assets/287d3402-1c8a-4a60-9b41-1161654aeb0d)
+
+![image](https://github.com/user-attachments/assets/84c2c23f-d064-42db-92de-ef9393ed0ec0)
+
 ```
 
-> **Dica:** Crie uma pasta chamada `prints` no seu projeto e salve as imagens lá.
 
 ---
 
