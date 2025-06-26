@@ -127,11 +127,11 @@ Acesse:
 Adicione aqui prints do Grafana, Prometheus e Swagger para ilustrar o monitoramento e a documentação da API:
 
 ```markdown
-![image](https://github.com/user-attachments/assets/d295bf2f-8a8e-46bd-a92e-8c2502033425)
+https://github.com/user-attachments/assets/d295bf2f-8a8e-46bd-a92e-8c2502033425
 
-![image](https://github.com/user-attachments/assets/287d3402-1c8a-4a60-9b41-1161654aeb0d)
+https://github.com/user-attachments/assets/287d3402-1c8a-4a60-9b41-1161654aeb0d
 
-![image](https://github.com/user-attachments/assets/84c2c23f-d064-42db-92de-ef9393ed0ec0)
+https://github.com/user-attachments/assets/84c2c23f-d064-42db-92de-ef9393ed0ec0
 
 ```
 
