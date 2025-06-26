@@ -10,9 +10,8 @@ Este projeto é uma API RESTful completa para gerenciamento de produtos e catego
 - [Como rodar localmente](#como-rodar-localmente)
 - [Monitoramento (Prometheus & Grafana)](#monitoramento-prometheus--grafana)
 - [Endpoints principais](#endpoints-principais)
-- [Deploy em nuvem](#deploy-em-nuvem)
+- [Como o projeto foi construído](#como-o-projeto-foi-construido)
 - [Prints dos dashboards](#prints-dos-dashboards)
-- [Próximos passos](#próximos-passos)
 
 ---
 
@@ -36,6 +35,7 @@ Este projeto é uma API RESTful completa para gerenciamento de produtos e catego
 - Prometheus + Grafana
 - Docker e Docker Compose
 - JUnit 5, Mockito, JMeter
+- **Apache Maven** (gerenciamento de dependências e build)
 
 ---
 
@@ -97,15 +97,28 @@ Acesse:
 
 ---
 
-## ☁️ Deploy em nuvem
+## 🛠️ Como o projeto foi construído
 
-Você pode hospedar facilmente no [Render](https://render.com/) ou [Railway](https://railway.app/) usando o Dockerfile já pronto.
+- **Apache Maven:** Utilizado para gerenciar as dependências do projeto e facilitar o processo de build e execução. O arquivo `pom.xml` define todas as bibliotecas necessárias, como Spring Boot, JWT, JPA, Actuator, Prometheus, Grafana, entre outras.
 
-**Passos básicos:**
-1. Suba o projeto para o GitHub.
-2. Crie um novo serviço Web no Render/Railway.
-3. Conecte o repositório e escolha o ambiente Docker.
-4. Pronto! Sua API estará disponível em uma URL pública.
+- **Estrutura em camadas:**
+  - **Controller:** Responsável por receber as requisições HTTP e retornar as respostas.
+  - **Service:** Onde fica a lógica de negócio da aplicação.
+  - **Repository:** Comunicação com o banco de dados usando Spring Data JPA.
+  - **Model:** Entidades que representam as tabelas do banco de dados.
+  - **DTO:** Objetos para transferência de dados entre as camadas.
+  - **Security:** Configuração de autenticação JWT e roles de usuário.
+  - **Config:** Outras configurações, como Swagger e monitoramento.
+
+- **Autenticação JWT:**
+  - Implementada usando Spring Security e JWT. O usuário faz login, recebe um token e utiliza esse token para acessar os endpoints protegidos.
+
+- **Monitoramento:**
+  - O Spring Boot Actuator expõe métricas no endpoint `/actuator/prometheus`.
+  - O Prometheus coleta essas métricas e o Grafana exibe dashboards visuais.
+
+- **Documentação:**
+  - O Swagger está disponível em `/swagger-ui.html` para testar e visualizar todos os endpoints da API.
 
 ---
 
@@ -120,17 +133,6 @@ Adicione aqui prints do Grafana, Prometheus e Swagger para ilustrar o monitorame
 ```
 
 > **Dica:** Crie uma pasta chamada `prints` no seu projeto e salve as imagens lá.
-
----
-
-## 🎯 Próximos passos
-
-- Implementar refresh tokens
-- Adicionar rate limiting
-- Implementar auditoria de logs
-- Configurar CI/CD
-- Adicionar testes de integração
-- Implementar cache Redis
 
 ---
 
