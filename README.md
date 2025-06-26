@@ -52,6 +52,12 @@ mvn clean package -DskipTests
 # Rode com Docker Compose
 docker-compose up -d
 ```
+🌐 Deploy em Produção
+Este projeto está hospedado gratuitamente no Render:
+- URL pública: https://prova-av2.onrender.com
+Você pode acessar a documentação Swagger, endpoints e health check diretamente pela URL acima:
+- Swagger: https://prova-av2.onrender.com/swagger-ui.html
+- Health Check: https://prova-av2.onrender.com/actuator/health
 
 Acesse:
 - API: [http://localhost:8080](http://localhost:8080)
