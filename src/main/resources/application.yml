@@ -1,0 +1,93 @@
+spring:
+  application:
+    name: api-produtos-categorias
+  
+  # Permitir referências circulares
+  main:
+    allow-circular-references: true
+  
+  # Configuração do banco de dados
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+  
+  # Configuração JPA
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  
+  # Configuração H2 Console
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  
+  # Configuração de segurança
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080
+  
+  # Configuração de validação
+  jackson:
+    default-property-inclusion: non_null
+
+# Configuração do servidor
+server:
+  port: 8080
+
+# Configuração JWT
+jwt:
+  secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+  expiration: 86400000 # 24 horas em milissegundos
+
+# Configuração do Spring Boot Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+# Configuração do OpenAPI/Swagger
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+  info:
+    title: API de Produtos e Categorias
+    description: API REST com autenticação JWT para gerenciamento de produtos e categorias
+    version: 1.0.0
+    contact:
+      name: Desenvolvedor
+      email: dev@example.com
+
+# Configuração de logging
+logging:
+  level:
+    org.springframework.security: DEBUG
+    com.example.projeto: DEBUG
+    org.springframework.web: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n" 
