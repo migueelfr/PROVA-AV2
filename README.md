@@ -130,8 +130,6 @@ Acesse:
 
 ![image](https://github.com/user-attachments/assets/daec17c8-e2cf-4806-89a2-fa198d946e50)
 
-
-
 ---
 
 **Desenvolvido para AV2 Arquitetura de Aplicações Web - Autenticação e Autorização JWT**  
