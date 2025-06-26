@@ -124,7 +124,6 @@ Acesse:
 
 ## 🖼️ Prints dos dashboards
 
-Adicione aqui prints do Grafana, Prometheus e Swagger para ilustrar o monitoramento e a documentação da API:
 
 
 ![image](https://github.com/user-attachments/assets/d295bf2f-8a8e-46bd-a92e-8c2502033425)
