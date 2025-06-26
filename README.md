@@ -131,8 +131,7 @@ Acesse:
 ![image](https://github.com/user-attachments/assets/daec17c8-e2cf-4806-89a2-fa198d946e50)
 
 
-> **Dica:** Crie uma pasta chamada `prints` no seu projeto e salve as imagens lá.
 
 ---
 
-**Desenvolvido para AV2 - Autenticação e Autorização JWT**  
+**Desenvolvido para AV2 Arquitetura de Aplicações Web - Autenticação e Autorização JWT**  
