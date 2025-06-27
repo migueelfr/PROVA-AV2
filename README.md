@@ -101,6 +101,8 @@ Você pode acessar a documentação Swagger, endpoints e health check diretament
 
 - **Swagger:**  
   [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+  
+OBS: Quando for aidiconar uma nova categoria ou produto no swagger, apagar a a string de ID para o ID ser gerado automaticamente
 
 ---
 
